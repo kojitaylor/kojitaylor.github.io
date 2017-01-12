@@ -2,17 +2,39 @@
 <html>
 
 <head>
+    <script>
+        var clicks = 0
+
+        function myFunction() {
+            clicks++;
+            document.getElementById("changeMessage").innerHTML = "You helped me " + clicks + " times, but it's not enough.";
+            console.log(clicks);
+
+        }
+    </script>
+
     <meta charset="utf-8">
     <title>gaston.uk</title>
 </head>
 
 <body bgcolor="#657CD8">
 
-<style>
-h1{color:white}
-h2{color:yellow;font-size:30px;}
-p{font-size:20px}
-</style>
+    <style>
+        h1 {
+            color: white
+        }
+
+        h2 {
+            color: yellow;
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px
+        }
+    </style>
+
+
 
     <h1>welcome child</h1>
     <p>This is my humble abode/swamp </p>
@@ -22,6 +44,11 @@ p{font-size:20px}
     <p>adverb informal</p>
     <p>remain motionless and quiet to escape detection.</p>
     <p>"a dozen officers had been lying doggo for hours"</p>
+
+<h2>Button time!</h2>
+    <p id="changeMessage">Click me! Please. Please click me. Please.</p>
+
+    <button type="button" onclick="myFunction()">Do it.</button>
 </body>
 
 </html>
