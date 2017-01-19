@@ -2,6 +2,17 @@
 <html>
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#flip").mouseover(function() {
+                $("#panel").slideDown("slow");
+            });
+            $("#flip").mouseout(function() {
+                $("#panel").slideUp("fast");
+            });
+        });
+    </script>
     <script>
         var clicks = 0
 
@@ -20,6 +31,19 @@
 <body bgcolor="#657CD8">
 
     <style>
+        #panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #EEAA33;
+            border: solid 1px #c3c3c3;
+        }
+
+        #panel {
+            padding: 200px;
+            display: none;
+        }
+
         h1 {
             color: white
         }
@@ -34,6 +58,8 @@
         }
     </style>
 
+    <div id="flip">Roll over to slideDown!</div>
+    <div id="panel">Roll out to slideUp!</div>
 
 
     <h1>welcome child</h1>
@@ -44,7 +70,7 @@
     <p>adverb informal</p>
     <p>remain motionless and quiet to escape detection.</p>
     <p>"a dozen officers had been lying doggo for hours"</p>
-<img src="max.jpg">
+    <img src="max.jpg">
     <h2>Button time!</h2>
     <p id="changeMessage">Click me! Please. Please click me. Please.</p>
 
